@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../styles/globals.css";
 
 import { cn } from "@/lib/utils";
 import { Nunito } from "next/font/google";
