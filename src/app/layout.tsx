@@ -19,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${cn(fontSans.variable, fontTitle.variable)} antialiased`}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          fontTitle.variable
+        )}
       >
         {children}
       </body>
