@@ -1,6 +1,7 @@
 import Logo from "@/app/assets/logo.svg";
 import { NavItems } from "@/components/pages/nav-items";
 import { UserDropdown } from "@/components/pages/user-dropdown";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 
 export default function DashboardLayout({
   children,
@@ -18,6 +19,7 @@ export default function DashboardLayout({
 
         <div className="w-full mt-auto border-t border-muted px-3 py-4 flex items-center justify-between gap-2">
           <UserDropdown />
+          <ThemeToggle />
         </div>
       </aside>
 
