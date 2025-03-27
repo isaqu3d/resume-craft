@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        fontSans: ["var(--font-sans)", ...fontFamily.sans],
-        fontTitle: ["var(--font-title)", ...fontFamily.serif],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        title: ["var(--font-title)", ...fontFamily.serif],
         arial: ["Arial", ...fontFamily.sans],
       },
       colors: {
