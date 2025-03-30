@@ -8,6 +8,7 @@ export function ResumesList() {
       <NewResumeDialog>
         <AddResumeButton />
       </NewResumeDialog>
+
       <ResumeCard />
       <ResumeCard />
       <ResumeCard />
