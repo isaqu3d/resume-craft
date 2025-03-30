@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { BaseDialogProps, Dialog } from "@/components/ui/dialog";
 import { InputField } from "@/components/ui/input/field";
@@ -32,6 +34,6 @@ export function NewResumeDialog(props: BaseDialogProps) {
           </form>
         </FormProvider>
       }
-    ></Dialog>
+    />
   );
 }
