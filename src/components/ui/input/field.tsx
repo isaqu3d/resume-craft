@@ -8,16 +8,25 @@ type InputFieldProps = ComponentProps<typeof Input> & {
   name: string;
 };
 
-export function InputField({ label, name, ...props }: InputFieldProps) {
+export function InputField({
+  label,
+  name,
+  required,
+  ...props
+}: InputFieldProps) {
   const { control } = useFormContext();
 
   return (
     <Controller
       control={control}
       name={name}
-      render={({ field }) => (
+      rules={{ required: required && "Campo obrigatório" }}
+      render={({ field, fieldState }) => (
         <FieldWrapper label={label}>
           <Input {...field} {...props} />
+          {fieldState.error && (
+            <p className="text-red-500 text-sm">{fieldState.error.message}</p>
+          )}
         </FieldWrapper>
       )}
     />
