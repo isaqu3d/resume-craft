@@ -1,7 +1,9 @@
-export default function ResumePage() {
+import { ResumePage } from "@/components/pages/dashboard/resume";
+
+export default function DashboardResumePage() {
   return (
     <main>
-      <h1>Resume</h1>
+      <ResumePage />
     </main>
   );
 }
