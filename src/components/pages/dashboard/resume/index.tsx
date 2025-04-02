@@ -11,7 +11,24 @@ import { ResumeContent } from "./resume-content";
 import { StructureSidebar } from "./structure-sidebar";
 
 export function ResumePage() {
-  const methods = useForm<ResumeData>();
+  const defaultValues: ResumeData = {
+    content: {
+      image: {
+        url: "",
+        visible: true,
+      },
+      infos: {
+        fullName: "",
+        headline: "",
+        email: "",
+        phone: "",
+        location: "",
+        website: "",
+      },
+    },
+  };
+
+  const methods = useForm<ResumeData>({ defaultValues });
 
   return (
     <FormProvider {...methods}>
