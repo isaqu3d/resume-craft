@@ -14,6 +14,7 @@ import {
   Underline,
 } from "lucide-react";
 import { Button } from "../button";
+import { Tooltip } from "../tooltip";
 
 type MenuBarProps = {
   editor: Editor | null;
@@ -87,14 +88,16 @@ export function MenuBar({ editor }: MenuBarProps) {
   return (
     <div className="flex items-center border-b p-2 flex-wrap">
       {ACTIONS.map((action) => (
-        <Button
-          onClick={action.action}
-          variant="ghost"
-          className="p-2 h-max"
-          type="button"
-        >
-          <action.icon className="w-4 h-4" />
-        </Button>
+        <Tooltip key={action.label} content={action.label}>
+          <Button
+            onClick={action.action}
+            variant="ghost"
+            className="p-2 h-max"
+            type="button"
+          >
+            <action.icon className="w-4 h-4" />
+          </Button>
+        </Tooltip>
       ))}
     </div>
   );
