@@ -1,3 +1,17 @@
+type ResumeImageData = {
+  url: string;
+  visible: boolean;
+};
+
+type ResumeInfosData = {
+  fullName: string;
+  headline: string;
+  email: string;
+  website: string;
+  phone: string;
+  location: string;
+};
+
 type ResumeSocialMediaData = {
   name: string;
   username: string;
@@ -65,3 +79,45 @@ type ResumeContentData = {
   certifications: Partial<ResumeCertificationData>[];
   projects: Partial<ResumeProjectData>[];
 };
+
+type ResumeLayoutSection = {
+  id?: string;
+  key: ResumeSections;
+};
+
+type ResumeLanguages =
+  | "english"
+  | "spanish"
+  | "french"
+  | "german"
+  | "italian"
+  | "portuguese";
+
+type ResumeStructureData = {
+  template: ResumeTemplates;
+  colorTheme: string;
+  layout: {
+    mainSections: ResumeLayoutSection[];
+    sidebarSections: ResumeLayoutSection[];
+  };
+  language: ResumeLanguages;
+};
+
+type ResumeData = {
+  content: ResumeContentData;
+  structure: ResumeStructureData;
+};
+
+type ResumeSections =
+  | "summary"
+  | "socialMedias"
+  | "experiences"
+  | "educations"
+  | "skills"
+  | "languages"
+  | "certifications"
+  | "projects";
+
+type ResumeTemplates = "eevee" | "onix" | "jynx" | "ditto";
+
+type AIGenerationMode = "JOB_TITLE" | "FIX_CONTENT" | "TRANSLATE_CONTENT";
