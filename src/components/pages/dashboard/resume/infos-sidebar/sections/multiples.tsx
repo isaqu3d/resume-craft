@@ -8,11 +8,15 @@ import {
   Languages,
   Share2,
 } from "lucide-react";
-import { Fragment } from "react";
-import { MultipleDragLisData, MultipleDragList } from "../multiple-drag-list";
+import { Fragment, useState } from "react";
+import { MultipleDragItemData, MultipleDragList } from "../multiple-drag-list";
 
 export function MultiplesSections() {
-  const sectionsKeys: MultipleDragLisData[] = [
+  const [sectionToAdd, setSectionToAdd] = useState<MultipleDragItemData | null>(
+    null
+  );
+
+  const sectionsKeys: MultipleDragItemData[] = [
     {
       formKey: "socialMedias",
       title: "Redes Sociais",
@@ -68,7 +72,11 @@ export function MultiplesSections() {
       {sectionsKeys.map((section) => (
         <Fragment key={`multiple-section-${section.title}`}>
           <Separator className="my-5" />
-          <MultipleDragList data={section} onAdd={() => {}} onEdit={() => {}} />
+          <MultipleDragList
+            data={section}
+            onAdd={() => setSectionToAdd(section)}
+            onEdit={() => {}}
+          />
         </Fragment>
       ))}
     </div>
