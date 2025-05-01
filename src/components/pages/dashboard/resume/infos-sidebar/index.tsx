@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { AiGenerationDropdown } from "./ai-generation-dropdown";
 import { BasicInfoSection } from "./sections/basic-info";
+import { MultiplesSections } from "./sections/multiples";
 import { SummarySection } from "./sections/summary";
 
 export function InfosSidebar() {
@@ -22,6 +23,7 @@ export function InfosSidebar() {
 
       <Separator className="my-5" />
       <SummarySection />
+      <MultiplesSections />
     </aside>
   );
 }
