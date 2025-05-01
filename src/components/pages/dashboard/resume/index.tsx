@@ -25,6 +25,14 @@ export function ResumePage() {
         location: "",
         website: "",
       },
+      summary: "",
+      certifications: [],
+      educations: [],
+      experiences: [],
+      languages: [],
+      socialMedias: [],
+      projects: [],
+      skills: [],
     },
   };
 
