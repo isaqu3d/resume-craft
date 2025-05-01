@@ -5,34 +5,63 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { User } from "next-auth";
+import { useParams } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
+
 import { InfosSidebar } from "./infos-sidebar";
 import { ResumeContent } from "./resume-content";
 import { StructureSidebar } from "./structure-sidebar";
 
-export function ResumePage() {
+type ResumePageProps = {
+  title: string;
+  initialData: Partial<ResumeData>;
+  user?: User;
+};
+
+export function ResumePage({ title, initialData, user }: ResumePageProps) {
+  const params = useParams();
+
+  const resumeId = params.id as string;
+
   const defaultValues: ResumeData = {
     content: {
+      summary: "<p></p>",
       image: {
-        url: "",
+        url: user?.image ?? "",
         visible: true,
       },
       infos: {
-        fullName: "",
+        email: user?.email ?? "",
+        fullName: user?.name ?? "",
         headline: "",
-        email: "",
-        phone: "",
         location: "",
+        phone: "",
         website: "",
       },
-      summary: "",
       certifications: [],
       educations: [],
       experiences: [],
       languages: [],
-      socialMedias: [],
       projects: [],
       skills: [],
+      socialMedias: [],
+    },
+    structure: {
+      template: "ditto",
+      colorTheme: "slate",
+      language: "portuguese",
+      layout: {
+        mainSections: [
+          { key: "socialMedias" },
+          { key: "summary" },
+          { key: "experiences" },
+          { key: "educations" },
+          { key: "certifications" },
+          { key: "projects" },
+        ],
+        sidebarSections: [{ key: "languages" }, { key: "skills" }],
+      },
     },
   };
 
