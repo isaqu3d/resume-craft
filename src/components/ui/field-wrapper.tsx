@@ -1,21 +1,26 @@
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
+import { FieldError } from "react-hook-form";
 import { Label } from "./label";
 
 type FieldWrapperProps = {
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
+  error?: FieldError;
 };
 
-export function FieldWrapper({
+export const FieldWrapper = ({
   label,
-  children,
   className,
-}: FieldWrapperProps) {
+  children,
+  error,
+}: FieldWrapperProps) => {
   return (
     <div className={cn("flex flex-col gap-2", className)}>
       <Label>{label}</Label>
       {children}
+      {error && <p className="text-sm text-red-500">{error.message}</p>}
     </div>
   );
-}
+};
