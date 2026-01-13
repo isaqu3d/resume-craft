@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { BaseDialogProps, Dialog } from "@/components/ui/dialog";
-import { InputField } from "@/components/ui/input/field";
+import { Button } from "@/ui/button";
+import { BaseDialogProps, Dialog } from "@/ui/dialog";
+import { InputField } from "@/ui/input/field";
 import { FormProvider, useForm } from "react-hook-form";
 
 type FormData = {
