@@ -4,7 +4,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/ui/select";
 import { Languages } from "lucide-react";
 import { Controller, useFormContext } from "react-hook-form";
 import { SectionTitle } from "../../infos-sidebar/section-title";
