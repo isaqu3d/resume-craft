@@ -1,6 +1,6 @@
 import Logo from "@/app/assets/logo.svg";
-import { NavItems } from "@/components/pages/nav-items";
-import { UserDropdown } from "@/components/pages/user-dropdown";
+import { NavItems } from "@/components/pages/dashboard/nav-items";
+import { UserDropdown } from "@/components/pages/dashboard/user-dropdown";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 
 export default function DashboardLayout({
