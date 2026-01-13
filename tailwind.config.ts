@@ -16,6 +16,9 @@ const config: Config = {
         arial: ["Arial", ...fontFamily.sans],
       },
       colors: {
+        resume: {
+          primary: "var(--resume-primary)",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
