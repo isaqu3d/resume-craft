@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Tooltip } from "@/components/ui/tooltip";
+import { Button } from "@/ui/button";
+import { Tooltip } from "@/ui/tooltip";
 import { cn } from "@/lib/utils";
 import {
   DragDropContext,

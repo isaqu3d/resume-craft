@@ -4,7 +4,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/resizable";
+} from "@/ui/resizable";
 import { User } from "next-auth";
 import { useParams } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";

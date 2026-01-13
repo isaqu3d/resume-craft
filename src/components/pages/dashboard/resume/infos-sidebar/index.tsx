@@ -1,5 +1,5 @@
 import Logo from "@/app/assets/logo.svg";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/ui/separator";
 import Link from "next/link";
 import { AiGenerationDropdown } from "./ai-generation-dropdown";
 import { BasicInfoSection } from "./sections/basic-info";

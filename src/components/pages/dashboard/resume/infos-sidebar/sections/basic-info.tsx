@@ -1,5 +1,5 @@
-import { InputField } from "@/components/ui/input/field";
-import { SwitchField } from "@/components/ui/switch/field";
+import { InputField } from "@/ui/input/field";
+import { SwitchField } from "@/ui/switch/field";
 import { UserRound } from "lucide-react";
 import { SectionTitle } from "../section-title";
 

@@ -1,4 +1,4 @@
-import { Editor } from "@/components/ui/editor";
+import { Editor } from "@/ui/editor";
 import { ScrollText } from "lucide-react";
 import { Controller, useFormContext } from "react-hook-form";
 import { SectionTitle } from "../section-title";

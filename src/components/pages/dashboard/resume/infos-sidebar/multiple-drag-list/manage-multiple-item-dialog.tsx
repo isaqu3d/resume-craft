@@ -1,10 +1,10 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { BaseDialogProps, Dialog } from "@/components/ui/dialog";
-import { EditorField } from "@/components/ui/editor/field";
-import { IconField } from "@/components/ui/icon-input/field";
-import { InputField } from "@/components/ui/input/field";
-import { SliderField } from "@/components/ui/slider/field";
+import { Badge } from "@/ui/badge";
+import { Button } from "@/ui/button";
+import { BaseDialogProps, Dialog } from "@/ui/dialog";
+import { EditorField } from "@/ui/editor/field";
+import { IconField } from "@/ui/icon-input/field";
+import { InputField } from "@/ui/input/field";
+import { SliderField } from "@/ui/slider/field";
 import { cn } from "@/lib/utils";
 import { Fragment, useEffect, useMemo } from "react";
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
